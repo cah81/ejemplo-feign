@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "9a9a232c-06b3-4823-a391-dd277f6ba7fe",
+		"name": "pruebas feign",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21517135"
+	},
+	"item": [
+		{
+			"name": "adicionar User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"carlos\",\r\n    \"email\":\"jdejdej\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar Car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\":\"opel\",\r\n    \"model\":\"astra\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/user/savecar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"user",
+						"savecar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar car en servidor feign",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"carlos\",\r\n    \"email\":\"jdejdej\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/user/car/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"user",
+						"car",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar car en servidor Remoto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"carlos\",\r\n    \"email\":\"jdejdej\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/car/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"car",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar Bike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\":\"opel\",\r\n    \"model\":\"astra\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/user/savecar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"user",
+						"savecar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar bike en servidor feign",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"carlos\",\r\n    \"email\":\"jdejdej\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/user/bike/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"user",
+						"bike",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar bike en servidor remoto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"carlos\",\r\n    \"email\":\"jdejdej\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/bike/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"bike",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
